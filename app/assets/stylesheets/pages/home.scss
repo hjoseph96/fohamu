@@ -1,105 +1,107 @@
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;600;700;800&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@1,300&display=swap');
-
-
-section.hero {
-  position: relative;
-  background-image: image-url('hero.jpg');
-  height: 93vh;
-  width: 100%;
-  background-size: cover;
-  background-position: bottom;
-  background-repeat: no-repeat;
-  border-bottom: 8px solid #F89F02;
-
-
-
-  .gradient {
-    position: absolute;
-    bottom: 0;
-    height: 200px;
+.pages-home {
+  section.hero {
+    position: relative;
+    background-image: image-url('hero.jpg');
+    height: 93vh;
     width: 100%;
-    background: linear-gradient(to top, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0) 100%)
+    background-size: cover;
+    background-position: bottom;
+    background-repeat: no-repeat;
+    border-bottom: 8px solid #F89F02;
+
+
+    .overlay {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(80,70,38,0.33);
+    }
+
+
+    .gradient {
+      position: absolute;
+      bottom: 0;
+      height: 200px;
+      width: 100%;
+      background: linear-gradient(to top, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0) 100%)
+    }
   }
-}
 
-section.our-mission {
-  min-height: 50vh;
-  width: 100%;
-  background-color: rgba(wheat,0.5);
-  border-bottom: 8px solid #F89F02;
+  section.our-mission {
+    min-height: 50vh;
+    width: 100%;
+    background-color: rgba(wheat,0.5);
+    border-bottom: 8px solid #F89F02;
 
-  h1 {
-    margin: 0;
-    text-align: center;
-    font-size: 4em;
-    font-family: 'Bebas Neue';
-    color: #BD8E01;
-    padding: 2em;
-    letter-spacing: 3px;
-  }
+    h1 {
+      margin: 0;
+      text-align: center;
+      font-size: 4em;
+      font-family: 'Bebas Neue';
+      color: #BD8E01;
+      padding: 2em;
+      letter-spacing: 3px;
+    }
 
-  .values {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    padding-bottom: 90px;
+    .values {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      padding-bottom: 90px;
 
-    .value {
-      width: 300px;
-      height: 700px;
-      padding: 1em;
-      margin: 2em;
-      border: 3px solid #BD8E01;
+      .value {
+        width: 300px;
+        height: 700px;
+        padding: 1em;
+        margin: 2em;
+        border: 3px solid #BD8E01;
 
-      .title {
-        display: block;
-        text-align: center;
-        color: #BD8E01;
-        width: 100%;
-        font-family: Bebas Neue;
-        font-size: 24px;
-        font-weight: 700;
-        text-transform: uppercase;
-        letter-spacing: 0.6px;
-        padding: 4rem 0 1.8rem;
-      }
-
-      .icon {
-        text-align: center;
-        display: block;
-
-        i {
-          font-size: 100px;
+        .title {
+          display: block;
+          text-align: center;
           color: #BD8E01;
+          width: 100%;
+          font-family: Bebas Neue;
+          font-size: 24px;
+          font-weight: 700;
+          text-transform: uppercase;
+          letter-spacing: 0.6px;
+          padding: 4rem 0 1.8rem;
         }
 
-        svg {
-          width: 100px;
-          height: 100px;
-          margin: 0 auto;
-          fill: #BD8E01;
-        }
-      }
+        .icon {
+          text-align: center;
+          display: block;
 
-      .description {
-        p  {
-          font-family: Lato;
-          font-size: 16.7px;
-          padding: 1em;
-          font-weight: 5
-          00;
-          color: #A56837;
-          letter-spacing: 0.5px;
+          i {
+            font-size: 100px;
+            color: #BD8E01;
+          }
+
+          svg {
+            width: 100px;
+            height: 100px;
+            margin: 0 auto;
+            fill: #BD8E01;
+          }
+        }
+
+        .description {
+          p  {
+            font-family: Lato;
+            font-size: 16.7px;
+            padding: 1em;
+            font-weight: 5
+            00;
+            color: #A56837;
+            letter-spacing: 0.5px;
+          }
         }
       }
     }
   }
-}
 
-section.our-work {
+  section.our-work {
   position: relative;
   width: 100%;
   min-height: 90vh;
@@ -340,6 +342,7 @@ section.our-work {
     .panel {
       max-width: 900px;
       margin: 10px;
+      background-color: white;
       width: calc(50% - 20px);
       box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
 
@@ -360,9 +363,6 @@ section.our-work {
       }
 
       .content {
-        background-color: white;
-        min-height: 200px;
-        height: calc(100% - 240px);
         padding: 50px;
 
         .logo {
@@ -386,4 +386,5 @@ section.our-work {
       }
     }
   }
+}
 }

@@ -13,13 +13,16 @@
       width: 150px;
       position: relative;
       left: 20px;
-      top: -14px;
+
+      @media (max-width: 1372px) {
+        top: -16px;
+      }
     }
   }
 
   .links {
     font-family: Ubuntu;
-    margin-top: 45px;
+    margin-top: 34px;
     margin-left: auto;
     margin-right: 4vw;
     z-index: 99;

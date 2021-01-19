@@ -19,8 +19,12 @@
 
 @import "font-awesome-sprockets";
 @import "font-awesome";
-@import "pages/home";
+@import "fonts";
+@import "sunset.min.css";
+
 @import 'navbar';
+@import "pages/home";
+@import "pages/our_school";
 
 html, body {
   padding: 0;

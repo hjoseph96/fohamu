@@ -1,0 +1,155 @@
+.pages-our_school {
+  background-color: linen;
+
+  section.hero {
+    position: relative;
+    height: 58vh;
+    width: 100%;
+    background-image: image-url('our_school.jpg');
+    background-size: cover;
+    background-position: top;
+    background-repeat: no-repeat;
+    border-bottom: 8px solid #F89F02;
+
+    .overlay {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(80,70,38,0.73);
+
+      h1 {
+        position: relative;
+        top: 44%;
+        text-align: center;
+        font-family: Bebas Neue;
+        color: snow;
+        font-size: 2.5em;
+        letter-spacing: 5.7px;
+      }
+    }
+  }
+
+  section.tenets {
+    border-bottom: 8px solid #F89F02;
+
+    .tenet-list {
+      display: flex;
+      flex-wrap: wrap;
+      padding: 100px 30px;
+
+      @media (max-width: 1271px) {
+        padding: 100px 60px;
+      }
+
+
+      .tenet {
+        --pwa-underline: #F89F02;
+        --pwa-width: 4px;
+        --pwa-animation-duration: .6s;
+
+        margin: 7px;
+        min-height: 500px;
+        display: flex;
+        flex-wrap: wrap;
+        width: calc( 33% - 10px);
+        background-color: rgba(wheat, 0.5);
+        box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+
+        @media (max-width: 1271px) {
+          width: calc(48% - 10px);
+        }
+
+        @media (max-width: 1271px) {
+          width: calc(100% - 10px);
+        }
+
+        &:hover {
+          box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+        }
+
+        &.development {
+          .title .icon svg {
+            height: 177px;
+            width: 180px;
+            position: relative;
+            top: -36px;
+          }
+        }
+
+        &.k-12{
+          .title h1 {
+            margin-top: 60px;
+          }
+        }
+
+        .title {
+          width: 100%;
+          height: 150px;
+          display: flex;
+
+          .icon {
+            svg {
+              padding: 5px;
+              width: 100px;
+              height: 100px;
+            }
+            img {
+              padding: 20px 47px 5px ;
+              width: 100px;
+              height: 85px;
+            }
+          }
+
+          h1 {
+            font-family: "Fira Sans", sans-serif;
+            font-size: 31px;
+            color: #BD8E01;
+            margin: 40px 0 20px 0;
+            width: 100%;
+            font-weight: 500;
+          }
+        }
+
+        .description {
+          width: 100%;
+          height: calc(100% - 150px);
+          padding: 50px;
+          font-family: Open Sans,sans-serif;
+          font-size: 22px;
+          font-weight: 500;
+          letter-spacing: 0.3px;
+          line-height: 1.6;
+        }
+
+      }
+    }
+  }
+
+  section.gallery {
+    height: 40vh;
+    padding: 50px;
+    position: relative;
+    background-color: whitesmoke;
+
+    .glide {
+      height: 100%;
+
+      .glide__slides {
+        margin: 50px 20px;
+
+        .glide__slide {
+          height: 34vh;
+          width: calc(33% - 20px);
+          background-color: aqua;
+          margin: 10px;
+
+          img {
+            height: 100%;
+            width: 100%;
+          }
+        }
+      }
+
+    }
+  }
+}
