@@ -4,4 +4,8 @@ class PagesController < ApplicationController
 
   def our_school
   end
+
+  def fbla
+  end
+  
 end
