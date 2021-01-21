@@ -1,0 +1,55 @@
+.pages-fbla {
+
+  section.video-banner {
+    position: relative;
+    height: 70vh;
+    width: 100%;
+
+
+    video {
+      width: 100%;
+      height: 100%;
+      object-fit: fill;
+    }
+
+    .overlay {
+      top: 0;
+      left: 0;
+      position: absolute;
+      height: 100%;
+      width: 100%;
+      background-color: rgba(0,0,0,0.42);
+    }
+
+    .brand-banner {
+      width: 100%;
+      height: 246px;
+      position: absolute;
+      background-image: url('FBLA-Banner_Blue.jpg');
+      bottom: -245px;
+      display: flex;
+      flex-wrap: wrap;
+      text-align: center;
+      justify-content: center;
+
+      img {
+        position: relative;
+        top: -113px;
+        left: 45px;
+      }
+
+      h2 {
+        position: relative;
+        top: -113px;
+        text-align: center;
+        font-size: 30px;
+        line-height: 1.2;
+        width: 100%;
+        font-size: 36px;
+        letter-spacing: 4px;
+        font-family: Bebas Neue, sans-serif;
+        color: white;
+      }
+    }
+  }
+}
