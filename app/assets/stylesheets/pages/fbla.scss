@@ -52,4 +52,26 @@
       }
     }
   }
+
+  section.rundown {
+    position: relative;
+    top: 245px;
+    min-height: 58vh;
+    width: 100%;
+    background-color: #d2d5e5;
+
+    .panels {
+      display: flex;
+      flex-wrap: wrap;
+      padding: 125px 50px 100px;
+      justify-content: center;
+
+      .panel {
+        background-color: white;
+        width: calc(33% - 30px);
+        min-height: 500px;
+        margin: 15px;
+      }
+    }
+  }
 }
