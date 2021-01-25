@@ -8,15 +8,12 @@ document.addEventListener('DOMContentLoaded', () => {
     perView: 3
   }).mount()
 
-  const galleryItems = document.querySelectorAll('.gallery-item img');
+  const galleryItems = document.querySelectorAll('.gallery-item img, .gallery-item video');
   const fullScreenGalleryEl = document.querySelector('.glide-modal');
-
   for (let i = 0; i < galleryItems.length; i++) {
 
     const showFullScreenGallery = (e) => {
       e.preventDefault();
-
-      debugger;
 
       let el = e.target.parentNode;
 
@@ -42,6 +39,15 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const clickedPhoto = document.querySelector('.gallery-item.selected');
     clickedPhoto.classList.remove('selected');
+
+    const videos = document.querySelectorAll('.glide-modal video');
+    if (videos.length > 0) {
+      for (let i = 0; i < videos.length; i++) {
+        let video = videos[i];
+        video.pause();
+        video.currentTime = 0;
+      }
+    }
 
     fullScreenGalleryEl.parentNode.classList.remove('show');
   };
