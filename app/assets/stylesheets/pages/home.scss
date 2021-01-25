@@ -50,8 +50,9 @@
       padding-bottom: 90px;
 
       .value {
-        width: 300px;
-        height: 700px;
+        width: calc( 20% - 2em);
+        min-width: 300px;
+        min-height: 700px;
         padding: 1em;
         margin: 2em;
         border: 3px solid #BD8E01;
@@ -88,13 +89,13 @@
 
         .description {
           p  {
-            font-family: Lato;
-            font-size: 16.7px;
+            font-family: Open Sans, sans-serif;
+            font-size: 19px;
             padding: 1em;
-            font-weight: 5
-            00;
+            font-weight: 600;
             color: #A56837;
-            letter-spacing: 0.5px;
+            letter-spacing: 0.2px;
+            line-height: 1.6;
           }
         }
       }

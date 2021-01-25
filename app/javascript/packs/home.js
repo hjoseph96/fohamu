@@ -34,12 +34,7 @@ document.addEventListener('DOMContentLoaded', () => {
     galleryItems[i].addEventListener('touchstart', showFullScreenGallery);
   }
 
-  const closeModal = (e) => {
-    e.preventDefault();
-
-    const clickedPhoto = document.querySelector('.gallery-item.selected');
-    clickedPhoto.classList.remove('selected');
-
+  const resetVideos = () => {
     const videos = document.querySelectorAll('.glide-modal video');
     if (videos.length > 0) {
       for (let i = 0; i < videos.length; i++) {
@@ -48,12 +43,28 @@ document.addEventListener('DOMContentLoaded', () => {
         video.currentTime = 0;
       }
     }
+  }
+
+  const closeModal = (e) => {
+    e.preventDefault();
+
+    const clickedPhoto = document.querySelector('.gallery-item.selected');
+    clickedPhoto.classList.remove('selected');
+
+    resetVideos();
 
     fullScreenGalleryEl.parentNode.classList.remove('show');
   };
 
   const galleryClose = document.querySelector('.gallery-modal .close');
-
   galleryClose.addEventListener('click', closeModal);
   galleryClose.addEventListener('touchstart', closeModal);
+
+  const fullScreenGalleryArrows = document.querySelectorAll('.glide-modal .glide__arrow');
+  for (var i = 0; i < fullScreenGalleryArrows.length; i++) {
+    let arrow = fullScreenGalleryArrows[i];
+    
+    arrow.addEventListener('click', resetVideos);
+    arrow.addEventListener('click', resetVideos);
+  }
 });
