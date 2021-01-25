@@ -40,7 +40,7 @@
 
       h2 {
         position: relative;
-        top: -113px;
+        top: -188px;
         text-align: center;
         font-size: 30px;
         line-height: 1.2;
@@ -137,6 +137,123 @@
           }
         }
       }
+    }
+  }
+
+
+  section.gallery {
+    height: 40vh;
+    padding: 50px;
+    position: relative;
+    background-color: whitesmoke;
+
+    .gallery-modal {
+      width: 100%;
+      height: 100vh;
+      display: none;
+      position: fixed;
+      top: 0; left: 0;
+      display: flex;
+      justify-content: center;
+      opacity: 0;
+      transition: opacity 750ms ease-in-out;
+      pointer-events: none;
+
+      &.show {
+        display: flex;
+        z-index: 8;
+        opacity: 1;
+        pointer-events: all;
+      }
+
+      .overlay {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0,0,0,0.9);
+      }
+
+      .close {
+        position: absolute;
+        width: 50px;
+        height: 50px;
+        right: 35px;
+        top: 165px;
+        z-index: 999;
+        cursor: pointer;
+
+        i {
+          color: white;
+          font-size: 38px;
+        }
+      }
+
+      .glide-modal {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+        width: 100%;
+
+
+        .glide__slides {
+
+          .glide__slide {
+            height: auto;
+            width: auto;
+            display: flex;
+            justify-content: center;
+
+            img {
+              width: 80vw;
+              height: 60vh;
+              object-fit: cover;
+              object-position: bottom;
+            }
+          }
+        }
+      }
+    }
+
+    .glide {
+      height: 100%;
+
+      .glide__slides {
+        margin: 50px 20px;
+
+        .glide__slide {
+          height: 34vh;
+          width: calc(33% - 20px);
+          margin: 10px;
+          position: relative;
+          background-color: rgba(black, 0.7);
+
+          &:hover, &:focus {
+
+            img, video {
+              transform: scale(1.02);
+            }
+          }
+
+          img, video {
+            height: 100%;
+            width: 100%;
+          }
+
+          i {
+            position: absolute;
+            margin: auto;
+            top: 50%;
+            left: 50%;
+            right: 50%;
+            bottom: 50%;
+            font-size: 48px;
+            color: white;
+          }
+        }
+      }
+
     }
   }
 }

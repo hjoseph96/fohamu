@@ -16,6 +16,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const showFullScreenGallery = (e) => {
       e.preventDefault();
 
+      debugger;
+
       let el = e.target.parentNode;
 
       el.classList.add('selected');

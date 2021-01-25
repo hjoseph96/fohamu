@@ -18,7 +18,7 @@
     <div class="panel">
       <div class="title">
         <div class="icon">
-          <%= inline_svg 'briefcase.svg' %>
+          <%= inline_svg_tag 'briefcase.svg' %>
         </div>
 
         <h1>Business</h1>
@@ -27,7 +27,7 @@
     <div class="panel">
       <div class="title">
         <div class="icon">
-          <%= inline_svg 'Handshake.svg' %>
+          <%= inline_svg_tag 'Handshake.svg' %>
         </div>
         <h1>Networking</h1>
       </div>
@@ -35,7 +35,7 @@
     <div class="panel">
       <div class="title">
         <div class="icon">
-          <%= inline_svg 'college.svg' %>
+          <%= inline_svg_tag 'college.svg' %>
         </div>
         <h1>College</h1>
       </div>
@@ -43,7 +43,7 @@
     <div class="panel">
       <div class="title">
         <div class="icon">
-          <%= inline_svg 'lightbulb.svg' %>
+          <%= inline_svg_tag 'lightbulb.svg' %>
         </div>
         <h1>Ideas</h1>
       </div>
@@ -51,7 +51,7 @@
     <div class="panel">
       <div class="title travel">
         <div class="icon">
-          <%= inline_svg 'travel.svg', class: 'travel' %>
+          <%= inline_svg_tag 'travel.svg', class: 'travel' %>
         </div>
         <h1>Travel</h1>
       </div>
@@ -59,7 +59,7 @@
     <div class="panel">
       <div class="title">
         <div class="icon">
-          <%= inline_svg 'globe.svg' %>
+          <%= inline_svg_tag 'globe.svg' %>
         </div>
         <h1>Global Citizen</h1>
       </div>
@@ -75,3 +75,91 @@
     <%= image_tag 'flag-for-haiti.png', class: 'flag' %>
   </h2>
 </div>
+
+
+
+<section class="gallery">
+  <div class=gallery-modal>
+    <div class="overlay"></div>
+
+    <div class="close">
+      <i class="fas fa-times-circle"></i>
+    </div>
+
+    <div class="glide-modal">
+      <div class="glide__track" data-glide-el="track">
+        <ul class="glide__slides">
+          <li class="glide__slide gallery-item">
+            <%= image_tag 'icdh.jpg' %>
+          </li>
+
+          <li class="glide__slide gallery-item">
+            <%= image_tag 'icdh-2.png' %>
+          </li>
+
+          <li class="glide__slide gallery-item">
+            <%= image_tag 'jean_teaching.jpg' %>
+          </li>
+
+        </ul>
+      </div>
+
+      <div class="glide__arrows" data-glide-el="controls">
+        <button class="glide__arrow glide__arrow--left" data-glide-dir="<">
+          <i class="fas fa-caret-left"></i>
+        </button>
+        <button class="glide__arrow glide__arrow--right" data-glide-dir=">">
+          <i class="fas fa-caret-right"></i>
+        </button>
+      </div>
+
+      <div class="glide__bullets" data-glide-el="controls[nav]">
+       <button class="glide__bullet" data-glide-dir="=0"></button>
+       <button class="glide__bullet" data-glide-dir="=3"></button>
+       <button class="glide__bullet" data-glide-dir="=6"></button>
+     </div>
+    </div>
+  </div>
+
+  <div class="glide">
+    <div class="glide__track" data-glide-el="track">
+      <ul class="glide__slides">
+        <li class="glide__slide gallery-item">
+          <%= video_tag 'fbla-awards.webm' %>
+          <i class="fas fa-play"></i>
+        </li>
+
+        <li class="glide__slide gallery-item">
+          <%= video_tag 'fbla_entry.webm' %>
+          <i class="fas fa-play"></i>
+
+        <li class="glide__slide gallery-item">
+          <%= video_tag 'fbla-audience.webm' %>
+          <i class="fas fa-play"></i>
+        </li>
+
+
+        <li class="glide__slide gallery-item">
+          <%= image_tag 'jean_teaching.jpg' %>
+        </li>
+
+
+      </ul>
+    </div>
+
+    <div class="glide__arrows" data-glide-el="controls">
+      <button class="glide__arrow glide__arrow--left" data-glide-dir="<">
+        <i class="fas fa-caret-left"></i>
+      </button>
+      <button class="glide__arrow glide__arrow--right" data-glide-dir=">">
+        <i class="fas fa-caret-right"></i>
+      </button>
+    </div>
+
+    <div class="glide__bullets" data-glide-el="controls[nav]">
+     <button class="glide__bullet" data-glide-dir="=0"></button>
+     <button class="glide__bullet" data-glide-dir="=3"></button>
+     <button class="glide__bullet" data-glide-dir="=6"></button>
+   </div>
+  </div>
+</section>
