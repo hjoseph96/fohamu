@@ -3,4 +3,5 @@ Rails.application.routes.draw do
   root 'pages#home'
   get 'our_school', to: 'pages#our_school'
   get 'fbla', to: 'pages#fbla'
+  get 'about_us', to: 'pages#about_us'
 end

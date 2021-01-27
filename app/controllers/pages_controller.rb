@@ -7,5 +7,8 @@ class PagesController < ApplicationController
 
   def fbla
   end
-  
+
+  def about_us
+  end
+
 end

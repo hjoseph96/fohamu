@@ -1,0 +1,210 @@
+body.pages-about_us {
+  section.hero {
+    position: relative;
+    height: 80vh;
+    width: 100%;
+    background-image: image-url('staff.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-bottom: 8px solid #F89F02;
+
+    .overlay {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(80,70,38,0.73);
+
+      h1 {
+        position: relative;
+        top: 44%;
+        text-align: center;
+        font-family: Bebas Neue;
+        color: snow;
+        font-size: 3em;
+        letter-spacing: 5.7px;
+      }
+    }
+  }
+
+  section.mission {
+    position: relative;
+    width: 100%;
+    min-height: 90vh;
+    background-color: linen;
+    padding: 50px 0 200px;
+
+    h1 {
+      margin: 0 0 40px;;
+      text-align: center;
+      font-size: 4em;
+      font-family: 'Bebas Neue';
+      color: #BD8E01;
+      padding: 2em 0 0em;
+    }
+
+    p  {
+      font-family: Open Sans, sans-serif;
+      font-size: 25px;
+      padding: 1em 6em;
+      max-width: 1200px;
+      margin: 0 auto;
+      font-weight: 400;
+      color: #A56837;
+      letter-spacing: 0.2px;
+      line-height: 1.6;
+    }
+  }
+
+  section.founders {
+    position: relative;
+    width: 100%;
+    min-height: 90vh;
+    padding: 100px 0 200px;
+    background-color: rgba(wheat,0.5);
+    display: flex;
+    flex-wrap: wrap;
+    border-top: 8px solid #F89F02;
+
+
+    .founder {
+      width: 50%;
+
+      @media (max-width: 1352px) {
+        width: 100%;
+        padding: 1em 0 5em;;
+      }
+
+      &.herbert {
+
+        @media (max-width: 1700px) {
+          .header .photo img.founder-img {
+            width: 633px !important;
+            height: 472px !important;
+          }
+        }
+
+        @media (max-width: 1352px) {
+          .header .photo img.founder-img {
+            width: 452px !important;
+            height: 347px !important;
+          }
+        }
+
+
+        .header .photo img.founder-img {
+          width: 787px;
+          height: 596px;
+        }
+
+        .education {
+          padding:  25px 0 63px;
+
+          .name {
+            margin-bottom: 30px;
+          }
+
+        }
+      }
+
+      &.jean {
+        @media (max-width: 1700px) {
+          .header .photo img.founder-img {
+            height: 485px !important;
+            width: 547px !important;
+          }
+        }
+
+        @media (max-width: 1352px) {
+          .header .photo img.founder-img {
+            height: 395px !important;
+            width: 435px !important;
+          }
+        }
+
+        .header .photo img.founder-img {
+          height: 663px;
+        }
+
+        .education {
+          margin-bottom: 62px;
+        }
+      }
+
+      .founder-img {
+        width: 734px;
+        height: 610px;
+      }
+      .header {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+
+        .photo img {
+          border: 2px solid black;
+          box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
+        }
+      }
+
+      .education {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+
+
+        .name {
+          width: 100%;
+          font-size: 3em;
+          color : #BD8E01;
+          font-family: 'Bebas Neue';
+          text-align: center;
+          letter-spacing: 2.9px;
+
+          h2 {
+            margin: 34px 0;
+          }
+        }
+
+
+        .logo {
+          img {
+            width: 150px;
+            height: 150px;
+          }
+        }
+
+        .degree {
+          margin-left: 50px;
+
+          @media (max-width: 1575px) {
+            width: 330px !important;
+
+            h3 {
+              margin-top: -7px !important;
+            }
+          }
+
+          .school-name {
+            font-size: 35px;
+            font-family: Open Sans, sans-serif;
+            margin-bottom: 15px;
+          }
+          h3 {
+            font-family: Open Sans, sans-serif;
+            font-weight: 400;
+            font-size: 19px;
+          }
+        }
+      }
+
+      .description {
+        padding: 0 100px;
+        font-family: Open Sans, sans-serif;
+        font-size: 25px;
+        color: #A56837;
+        letter-spacing: 0.2px;
+        line-height: 1.9;
+      }
+    }
+  }
+}
