@@ -12,6 +12,8 @@ gem 'jbuilder', '~> 2.7'
 
 gem 'font-awesome-sass', '~> 5.15.1'
 gem 'inline_svg'
+gem 'money-rails'
+gem 'currency_select'
 
 
 gem 'bootsnap', '>= 1.4.4', require: false

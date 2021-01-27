@@ -4,4 +4,7 @@ Rails.application.routes.draw do
   get 'our_school', to: 'pages#our_school'
   get 'fbla', to: 'pages#fbla'
   get 'about_us', to: 'pages#about_us'
+
+  get 'donate', to: 'donations#donate'
+  get 'donate/preview', to: 'donations#donation_preview'
 end

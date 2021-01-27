@@ -1,0 +1,70 @@
+<%= render partial: 'layouts/navbar' %>
+
+<section class="select-donation">
+  <div class="overlay"></div>
+
+  <div class=donation-panel>
+    <h1>Donate</h1>
+
+    <%= form_tag(donate_preview_path) do %>
+      <div class="options">
+        <div class="option one-time">
+          <div class="header">
+            <h2>One-Time</h2>
+
+            <div class="icon">
+              <%= image_tag "relieved_face.gif" %>
+            </div>
+          </div>
+
+          <div class="form">
+            <%= radio_button_tag 'donate_type', 'one_time' %>
+            <div class="amount">
+              <%= number_field_tag 'price', 10, min: 10 %>
+              <%= currency_select('donation', 'price', ['USD', 'EUR', 'CAD']) %>
+            </div>
+          </div>
+        </div>
+
+        <div class="option yearly">
+          <div class="header">
+            <h2>Yearly</h2>
+
+            <div class="icon">
+              <%= image_tag "grinning_face_with_smiling_eyes.gif" %>
+            </div>
+          </div>
+
+          <div class="form">
+            <%= radio_button_tag 'donate_type', 'one_time' %>
+            <div class="amount">
+              <%= number_field_tag 'price', 40, min: 40 %>
+              <%= currency_select('donation', 'price', ['USD', 'EUR', 'CAD']) %>
+            </div>
+          </div>
+        </div>
+
+        <div class="option monthly">
+          <div class="header">
+            <h2>Monthly</h2>
+
+            <div class="icon">
+              <%= image_tag "beaming_face_with_smiling_eyes.gif" %>
+            </div>
+          </div>
+
+          <div class="form">
+            <%= radio_button_tag 'donate_type', 'one_time' %>
+
+            <div class="amount">
+              <%= number_field_tag 'price', 10, min: 10 %>
+              <%= currency_select('donation', 'price', ['USD', 'EUR', 'CAD']) %>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  <% end %>
+
+</section>
