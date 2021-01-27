@@ -16,11 +16,11 @@
               <%= image_tag "relieved_face.gif" %>
             </div>
           </div>
+          <%= radio_button_tag 'donation_type', 'one_time' %>
 
-          <div class="form">
-            <%= radio_button_tag 'donate_type', 'one_time' %>
+          <div class="form hidden">
             <div class="amount">
-              <%= number_field_tag 'price', 10, min: 10 %>
+              <%= number_field_tag 'one_time_price', 10, min: 10 %>
               <%= currency_select('donation', 'price', ['USD', 'EUR', 'CAD']) %>
             </div>
           </div>
@@ -34,11 +34,11 @@
               <%= image_tag "grinning_face_with_smiling_eyes.gif" %>
             </div>
           </div>
+          <%= radio_button_tag 'donation_type', 'yearly' %>
 
-          <div class="form">
-            <%= radio_button_tag 'donate_type', 'one_time' %>
+          <div class="form hidden">
             <div class="amount">
-              <%= number_field_tag 'price', 40, min: 40 %>
+              <%= number_field_tag 'yearly_price', 40, min: 40 %>
               <%= currency_select('donation', 'price', ['USD', 'EUR', 'CAD']) %>
             </div>
           </div>
@@ -53,11 +53,11 @@
             </div>
           </div>
 
-          <div class="form">
-            <%= radio_button_tag 'donate_type', 'one_time' %>
+          <%= radio_button_tag 'donation_type', 'monthly' %>
+          <div class="form hidden">
 
             <div class="amount">
-              <%= number_field_tag 'price', 10, min: 10 %>
+              <%= number_field_tag 'monthly_price', 10, min: 10 %>
               <%= currency_select('donation', 'price', ['USD', 'EUR', 'CAD']) %>
             </div>
           </div>

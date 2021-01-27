@@ -1,6 +1,8 @@
 import Glide from '@glidejs/glide';
 
 document.addEventListener('DOMContentLoaded', () => {
+  const sliders = document.querySelectorAll('.glide');
+  if (sliders.length === 0) return;
 
   new Glide('.glide', {
     type: 'slider',
@@ -63,7 +65,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const fullScreenGalleryArrows = document.querySelectorAll('.glide-modal .glide__arrow');
   for (var i = 0; i < fullScreenGalleryArrows.length; i++) {
     let arrow = fullScreenGalleryArrows[i];
-    
+
     arrow.addEventListener('click', resetVideos);
     arrow.addEventListener('click', resetVideos);
   }
