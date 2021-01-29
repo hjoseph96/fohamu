@@ -1,0 +1,69 @@
+<%= render partial: 'layouts/navbar' %>
+
+<section class="payment">
+  <div class="payment-panel">
+    <h1>Donation</h1>
+
+    <div>
+      <h3><%= @donation.frequency.capitalize.gsub('_', '-') %> Amount</h3>
+      <p><%= @donation.price_in_cents / 100 %> <%= @donation.currency %></p>
+    </div>
+
+    <div class="payment-info">
+
+      <div class="card-information">
+        <div class="card-wrapper">
+        </div>
+
+        <form id="card-form">
+          <p class="message">Name on Card</p>
+          <input type="text" name="name"/>
+          <p class="message">Card Number</p>
+          <input type="text" name="number">
+
+          <div class="inline">
+            <p class="message">Expiration</p>
+            <input type="text" name="expiry"/>
+            <p class="message">CVC</p>
+            <input type="text" name="cvc"/>
+          </div>
+        </form>
+      </div>
+
+      <div class="donor-info">
+        <h3>Address</h3>
+        <form id="billing-info"">
+          <p class="message">Address 1</p>
+          <input type="text" name="address1"/>
+
+          <p class="message">Address 2 (Optional)</p>
+          <input type="text" name="address2"/>
+
+          <p class="message">City</p>
+          <input type="text" name="city">
+
+          <p class="message">State</p>
+          <%= select_tag :state, options_for_select(us_states) %>
+
+          <p class="message">Zip Code</p>
+          <input type="text" name="zip-code">
+
+        </form>
+
+        <h3>Contact Information</h3>
+        <form id="contact-info"">
+          <p class="message">Phone</p>
+          <input type="text" name="phone"/>
+
+          <p class="message">Email</p>
+          <input type="text" name="email"/>
+        </form>
+      </div>
+    </div>
+
+
+    <div class="submit">
+      <%= link_to "Submit", '#', class: 'donate button pwa-element pwa-borders-borderBottom-reveal' %>
+    </div>
+  </div>
+</section>

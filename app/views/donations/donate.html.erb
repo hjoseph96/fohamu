@@ -6,7 +6,7 @@
   <div class=donation-panel>
     <h1>Donate</h1>
 
-    <%= form_tag(donate_preview_path) do %>
+    <%= form_tag(donate_preview_path, method: :GET) do %>
       <div class="options">
         <div class="option one-time">
           <div class="header">
@@ -16,12 +16,12 @@
               <%= image_tag "relieved_face.gif" %>
             </div>
           </div>
-          <%= radio_button_tag 'donation_type', 'one_time' %>
+          <%= radio_button_tag 'donation[donation_type]', 'one_time' %>
 
           <div class="form hidden">
             <div class="amount">
-              <%= number_field_tag 'one_time_price', 10, min: 10 %>
-              <%= currency_select('donation', 'price', ['USD', 'EUR', 'CAD']) %>
+              <%= number_field_tag 'donation[one_time_price]', 10, min: 10 %>
+              <%= currency_select('donation', 'one_time_currency', ['USD', 'EUR', 'CAD']) %>
             </div>
           </div>
         </div>
@@ -34,12 +34,12 @@
               <%= image_tag "grinning_face_with_smiling_eyes.gif" %>
             </div>
           </div>
-          <%= radio_button_tag 'donation_type', 'yearly' %>
+          <%= radio_button_tag 'donation[donation_type]', 'yearly' %>
 
           <div class="form hidden">
             <div class="amount">
               <%= number_field_tag 'yearly_price', 40, min: 40 %>
-              <%= currency_select('donation', 'price', ['USD', 'EUR', 'CAD']) %>
+              <%= currency_select('donation', 'yearly_currency', ['USD', 'EUR', 'CAD']) %>
             </div>
           </div>
         </div>
@@ -53,18 +53,22 @@
             </div>
           </div>
 
-          <%= radio_button_tag 'donation_type', 'monthly' %>
+          <%= radio_button_tag 'donation[donation_type]', 'monthly' %>
           <div class="form hidden">
-
             <div class="amount">
-              <%= number_field_tag 'monthly_price', 10, min: 10 %>
-              <%= currency_select('donation', 'price', ['USD', 'EUR', 'CAD']) %>
+              <%= number_field_tag 'donation[monthly_price]', 10, min: 10 %>
+              <%= currency_select('donation', 'monthly_currency', ['USD', 'EUR', 'CAD']) %>
             </div>
           </div>
         </div>
 
       </div>
+
+      <div id="submit-donation-type">
+        <%= submit_tag "Next", class: 'donate button pwa-element pwa-borders-borderBottom-reveal' %>
+      </div>
     </div>
   <% end %>
+
 
 </section>

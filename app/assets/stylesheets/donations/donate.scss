@@ -1,180 +1,408 @@
-section.select-donation {
-  position: relative;
-  height: 100vh;
-  width: 100%;
-  background-image: image-url('donation-bg.jpg');
-  background-size: cover;
-  background-repeat: no-repeat;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-
-  .overlay {
-    position: absolute;
+body.donations-donate {
+  section.select-donation {
+    position: relative;
+    height: 100vh;
     width: 100%;
-    height: 100%;
-    background-color: rgba(80,70,38,0.73);
-    -webkit-backdrop-filter: blur(5px);
-    /* apply the blur */
-    backdrop-filter: blur(5px);
-    z-index: 5;
-  }
+    background-image: image-url('donation-bg.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
 
-  .donation-panel {
-    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
-    min-height: 60vh;
-    background-color: linen;
-    min-width: 50vw;
-    z-index: 99;
-
-    h1 {
-      font-family: Bebas Neue, sans-serif;
-      font-size: 58px;
-      color: #BD8E01;
+    .overlay {
+      position: absolute;
       width: 100%;
-      font-weight: 500;
-      letter-spacing: 2.8px;
-      margin-top: 44px;
+      height: 100%;
+      background-color: rgba(80,70,38,0.73);
+      -webkit-backdrop-filter: blur(5px);
+      /* apply the blur */
+      backdrop-filter: blur(5px);
+      z-index: 5;
     }
 
-    .options {
-      width: 100%;
-      display: flex;
-      flex-wrap: wrap;
-      padding: 100px 0;
-      justify-content: center;
+    .donation-panel {
+      box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+      min-height: 60vh;
+      background-color: linen;
+      min-width: 50vw;
+      z-index: 99;
 
-      .option {
-        background-color: white;
-        width: calc(30% - 20px);
-        min-height: 40vh;
-        margin: 0 10px;
+      h1 {
+        font-family: Bebas Neue, sans-serif;
+        font-size: 58px;
+        color: #BD8E01;
+        width: 100%;
+        font-weight: 500;
+        letter-spacing: 2.8px;
+        margin-top: 44px;
+      }
 
-        .header {
-          display: flex;
-          flex-wrap: wrap;
-          width: 100%;
+      .options {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        padding: 100px 0;
+        justify-content: center;
 
-          h2 {
+        .option {
+          background-color: white;
+          width: calc(30% - 20px);
+          min-height: 40vh;
+          margin: 0 10px;
+
+          .header {
+            display: flex;
+            flex-wrap: wrap;
             width: 100%;
-            font-family: "Bebas Neue", sans-serif;
-            font-size: 29px;
-            font-weight: 500;
-            letter-spacing: 1.8px;
-            margin-bottom: 25px;
-            margin-top: 36px;
-          }
 
-          .icon {
-            width: 100%;
+            h2 {
+              width: 100%;
+              font-family: "Bebas Neue", sans-serif;
+              font-size: 29px;
+              font-weight: 500;
+              letter-spacing: 1.8px;
+              margin-bottom: 25px;
+              margin-top: 36px;
+            }
 
-            img {
-              width: 99px;
-              height: 99px;
+            .icon {
+              width: 100%;
+
+              img {
+                width: 99px;
+                height: 99px;
+              }
             }
           }
-        }
 
-        input[type="radio"] {
-          margin-top: 15px;
-          width: 60px;
-          border: 0;
-          height: 1.3em;
-        }
-
-        .form {
-          width: 100%;
-          transition: opacity 750ms ease-in-out;
-          opacity: 1;
-          display: flex;
-
-          &.hidden {
-            display: none;
-            opacity: 0;
-          }
-
-
-          input[type="number"] {
-            font-family: "Open Sans", sans-serif;
-            text-align: center;
-            outline: 0;
-            background: #f2f2f2;
+          input[type="radio"] {
+            margin-top: 15px;
+            width: 60px;
             border: 0;
-            margin: 100px 0 15px;
-            padding: 15px;
-            box-sizing: border-box;
-            font-size: 23px;
-            width: 135px;
-            letter-spacing: -1.5px;
+            height: 1.3em;
           }
-          /* class applies to select element itself, not a wrapper element */
-          select {
+
+          .form {
+            width: 100%;
+            transition: opacity 750ms ease-in-out;
+            opacity: 1;
             display: flex;
-            font-size: 16px;
-            font-family: sans-serif;
-            font-weight: 700;
-            color: #444;
-            line-height: 1.3;
-            padding: 0.6em 1.4em 0.5em 0.8em;
-            width: 67%;
-            max-width: 67%;
-            /* useful when width is set to anything other than 100% */
-            box-sizing: border-box;
-            margin: 0 auto;
-            border: none;
-            box-shadow: 0 1px 0 1px rgba(0,0,0,.04);
-            border-radius: 0.5em;
-            -moz-appearance: none;
-            -webkit-appearance: none;
-            appearance: none;
-            background-color: #fff;
-            /* note: bg image below uses 2 urls. The first is an svg data uri for the arrow icon, and the second is the gradient.
+
+            &.hidden {
+              display: none;
+              opacity: 0;
+            }
+
+            input[type="number"] {
+              font-family: "Open Sans", sans-serif;
+              text-align: center;
+              outline: 0;
+              background: #f2f2f2;
+              border: 0;
+              margin: 100px 0 15px;
+              padding: 15px;
+              box-sizing: border-box;
+              font-size: 23px;
+              width: 135px;
+              letter-spacing: -1.5px;
+            }
+            /* class applies to select element itself, not a wrapper element */
+            select {
+              display: flex;
+              font-size: 16px;
+              font-family: sans-serif;
+              font-weight: 700;
+              color: #444;
+              line-height: 1.3;
+              padding: 0.6em 1.4em 0.5em 0.8em;
+              width: 67%;
+              max-width: 67%;
+              /* useful when width is set to anything other than 100% */
+              box-sizing: border-box;
+              margin: 0 auto;
+              border: none;
+              box-shadow: 0 1px 0 1px rgba(0,0,0,.04);
+              border-radius: 0.5em;
+              -moz-appearance: none;
+              -webkit-appearance: none;
+              appearance: none;
+              background-color: #fff;
+              /* note: bg image below uses 2 urls. The first is an svg data uri for the arrow icon, and the second is the gradient.
     for the icon, if you want to change the color, be sure to use `%23` instead of `#`, since it's a url. You can also swap in a different svg icon or an external image reference
 
   */
-          }
-          /* Hide arrow icon in IE browsers */
-          select::-ms-expand {
-            display: none;
-          }
-          /* Hover style */
-          select:hover {
-            border-color: #888;
-          }
-          /* Focus style */
-          select:focus {
-            border-color: #aaa;
-            /* It'd be nice to use -webkit-focus-ring-color here but it doesn't work on box-shadow */
-            box-shadow: 0 0 1px 3px rgba(59, 153, 252, .7);
-            box-shadow: 0 0 0 3px -moz-mac-focusring;
-            color: #222;
-            outline: none;
-          }
-          /* Set options to normal weight */
-          select option {
-            font-weight: normal;
-          }
-          /* Support for rtl text, explicit support for Arabic and Hebrew */
-          *[dir="rtl"] select,
-          :root:lang(ar) select,
-          :root:lang(iw) select {
-            background-position: left 0.7em top 50%, 0 0;
-            padding: 0.6em 0.8em 0.5em 1.4em;
-          }
-          /* Disabled styles */
-          select:disabled,
-          select[aria-disabled=true] {
-            color: graytext;
-            background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22graytext%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2012.9l128%20127.9c3.6%203.6%207.8%205.4%2012.8%205.4s9.2-1.8%2012.8-5.4L287%2095c3.5-3.5%205.4-7.8%205.4-12.8%200-5-1.9-9.2-5.5-12.8z%22%2F%3E%3C%2Fsvg%3E'), linear-gradient(to bottom, #ffffff 0%,#e5e5e5 100%);
-          }
+            }
+            /* Hide arrow icon in IE browsers */
+            select::-ms-expand {
+              display: none;
+            }
+            /* Hover style */
+            select:hover {
+              border-color: #888;
+            }
+            /* Focus style */
+            select:focus {
+              border-color: #aaa;
+              /* It'd be nice to use -webkit-focus-ring-color here but it doesn't work on box-shadow */
+              box-shadow: 0 0 1px 3px rgba(59, 153, 252, .7);
+              box-shadow: 0 0 0 3px -moz-mac-focusring;
+              color: #222;
+              outline: none;
+            }
+            /* Set options to normal weight */
+            select option {
+              font-weight: normal;
+            }
+            /* Support for rtl text, explicit support for Arabic and Hebrew */
+            *[dir="rtl"] select,
+            :root:lang(ar) select,
+            :root:lang(iw) select {
+              background-position: left 0.7em top 50%, 0 0;
+              padding: 0.6em 0.8em 0.5em 1.4em;
+            }
+            /* Disabled styles */
+            select:disabled,
+            select[aria-disabled=true] {
+              color: graytext;
+              background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22graytext%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2012.9l128%20127.9c3.6%203.6%207.8%205.4%2012.8%205.4s9.2-1.8%2012.8-5.4L287%2095c3.5-3.5%205.4-7.8%205.4-12.8%200-5-1.9-9.2-5.5-12.8z%22%2F%3E%3C%2Fsvg%3E'), linear-gradient(to bottom, #ffffff 0%,#e5e5e5 100%);
+            }
 
-          select:disabled:hover,
-          select[aria-disabled=true] {
-            border-color: #aaa;
+            select:disabled:hover,
+            select[aria-disabled=true] {
+              border-color: #aaa;
+            }
           }
         }
       }
     }
+
+    #submit-donation-type {
+      display: flex;
+      opacity: 0;
+      transition: opacity 750ms ease-in-out;
+      margin-left: auto;
+      order: 1;
+      width: 98px;
+
+      &.show {
+        opacity: 1;
+      }
+    }
+
+    .donate.button {
+      --pwa-underline: wheat;
+      text-decoration: none;
+      margin-top: 0;
+      margin-right: 25px;
+      padding: 10px 28px !important;
+      background-color: #F87B5E;
+      font-family: Ubuntu;
+      color: white;
+      font-weight: 500;
+      letter-spacing: 0.3px;
+      font-size: 19px;
+      border: none;
+    }
+  }
+}
+
+body.donations-preview_donation {
+  section.payment {
+    background-color: linen;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+    height: 100vh;
+    width: 100%;
+
+    h1 {
+      font-size: 43px;
+      font-family: Bebas Neue;
+      letter-spacing: 3.2px;
+    }
+
+    h3 {
+      margin: 10px 0;
+      font-size: 19px;
+      font-family: Ubuntu;
+    }
+
+    .payment-panel {
+      box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+      min-height: 60vh;
+      min-width: 50vw;
+      z-index: 99;
+      background-color: white;
+    }
+
+    form {
+      position: relative;
+      z-index: 1;
+      background: #FFFFFF;
+      max-width: 660px;
+      margin: 0 auto;
+      text-align: center;
+      width: 62%;
+    }
+
+    form input {
+      font-family: "Roboto", sans-serif;
+      outline: 0;
+      background: #f2f2f2;
+      width: 100%;
+      border: 0;
+      margin: 0 0 15px;
+      padding: 15px;
+      box-sizing: border-box;
+      font-size: 14px;
+    }
+
+    form button {
+      font-family: "Roboto", sans-serif;
+      text-transform: uppercase;
+      outline: 0;
+      background: #4CAF50;
+      width: 100%;
+      border: 0;
+      padding: 15px;
+      color: #FFFFFF;
+      font-size: 14px;
+      -webkit-transition: all 0.3 ease;
+      transition: all 0.3 ease;
+      cursor: pointer;
+    }
+
+    form button:active,
+    form button:focus,
+    form button:hover {
+      background: #43A047;
+    }
+
+    form .message {
+      margin: 15px 0 0;
+      color: #b3b3b3;
+      font-size: 19px;
+      font-family: Open Sans;
+    }
+
+    form .message a {
+      color: #4CAF50;
+      text-decoration: none;
+    }
+
+    form .register-form {
+      display: none;
+    }
+  }
+  /* class applies to select element itself, not a wrapper element */
+  select {
+    display: flex;
+    font-size: 16px;
+    font-family: sans-serif;
+    font-weight: 700;
+    color: #444;
+    line-height: 1.3;
+    padding: 0.6em 1.4em 0.5em 0.8em;
+    width: 68px;
+    max-width: 100px;
+    /* useful when width is set to anything other than 100% */
+    box-sizing: border-box;
+    margin: 0 auto;
+    border: none;
+    box-shadow: 0 1px 0 1px rgba(0,0,0,.04);
+    border-radius: 0.5em;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    appearance: none;
+    background-color: #fff;
+    /* note: bg image below uses 2 urls. The first is an svg data uri for the arrow icon, and the second is the gradient.
+for the icon, if you want to change the color, be sure to use `%23` instead of `#`, since it's a url. You can also swap in a different svg icon or an external image reference
+
+*/
+  }
+  /* Hide arrow icon in IE browsers */
+  select::-ms-expand {
+    display: none;
+  }
+  /* Hover style */
+  select:hover {
+    border-color: #888;
+  }
+  /* Focus style */
+  select:focus {
+    border-color: #aaa;
+    /* It'd be nice to use -webkit-focus-ring-color here but it doesn't work on box-shadow */
+    box-shadow: 0 0 1px 3px rgba(59, 153, 252, .7);
+    box-shadow: 0 0 0 3px -moz-mac-focusring;
+    color: #222;
+    outline: none;
+  }
+  /* Set options to normal weight */
+  select option {
+    font-weight: normal;
+  }
+  /* Support for rtl text, explicit support for Arabic and Hebrew */
+  *[dir="rtl"] select,
+  :root:lang(ar) select,
+  :root:lang(iw) select {
+    background-position: left 0.7em top 50%, 0 0;
+    padding: 0.6em 0.8em 0.5em 1.4em;
+  }
+  /* Disabled styles */
+  select:disabled,
+  select[aria-disabled=true] {
+    color: graytext;
+    background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22graytext%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2012.9l128%20127.9c3.6%203.6%207.8%205.4%2012.8%205.4s9.2-1.8%2012.8-5.4L287%2095c3.5-3.5%205.4-7.8%205.4-12.8%200-5-1.9-9.2-5.5-12.8z%22%2F%3E%3C%2Fsvg%3E'), linear-gradient(to bottom, #ffffff 0%,#e5e5e5 100%);
+  }
+
+  select:disabled:hover,
+  select[aria-disabled=true] {
+    border-color: #aaa;
+  }
+
+  .payment-info {
+    display: flex;
+    justify-content: center;
+
+    .card-wrapper {
+      width: 100%;
+      height: 200px;
+      margin-top: 83px;
+    }
+
+    .card-information,
+    .donor-info {
+      width: calc(50% - 30px);
+      display: flex;
+      flex-wrap: wrap;
+
+      h3,
+      p {
+        width: 100%;
+      }
+    }
+  }
+
+  .submit {
+    margin-top: 96px;
+  }
+
+  .donate.button {
+    --pwa-underline: wheat;
+    text-decoration: none;
+    margin-top: 0;
+    margin-right: 25px;
+    padding: 10px 28px !important;
+    background-color: #F87B5E;
+    font-family: Ubuntu;
+    color: white;
+    font-weight: 500;
+    letter-spacing: 0.3px;
+    font-size: 19px;
+    border: none;
   }
 }

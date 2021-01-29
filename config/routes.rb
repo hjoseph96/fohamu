@@ -6,5 +6,5 @@ Rails.application.routes.draw do
   get 'about_us', to: 'pages#about_us'
 
   get 'donate', to: 'donations#donate'
-  get 'donate/preview', to: 'donations#donation_preview'
+  get 'donate/preview', to: 'donations#preview_donation'
 end

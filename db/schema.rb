@@ -16,7 +16,7 @@ ActiveRecord::Schema.define(version: 2021_01_27_194855) do
   enable_extension "plpgsql"
 
   create_table "donations", force: :cascade do |t|
-    t.integer "price_cents", null: false
+    t.integer "price_in_cents", null: false
     t.string "currency"
     t.integer "frequency"
     t.datetime "created_at", precision: 6, null: false
