@@ -4,9 +4,11 @@ Rails.application.routes.draw do
   get 'our_school', to: 'pages#our_school'
   get 'fbla', to: 'pages#fbla'
   get 'about_us', to: 'pages#about_us'
+  get 'privacy_policy', to: 'pages#privacy_policy'
+  get 'terms_of_service', to: 'pages#terms_of_service'
 
   get 'donate', to: 'donations#donate'
   get 'donate/preview', to: 'donations#preview_donation'
-  get 'donate/success', to: 'donationations#donation_sucess'
+  get 'donate/success', to: 'donations#donation_success'
   post '/donate/process_payment', to: 'donations#charge_donation'
 end

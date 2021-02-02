@@ -1,0 +1,24 @@
+body.pages-terms_of_service { background-color: linen; }
+
+section.terms-of-service {
+  padding: 250px 0 100px;
+  max-width: 70vw;
+  margin: 0 auto;
+  font-family: Open Sans, sans-serif;
+
+  h1 {
+    font-size: 41px;
+    text-align: center;
+  }
+
+  p, ol, ul {
+    font-size: 16px;
+    letter-spacing: 0.5px;
+    line-height: 1.6;
+    margin: 20px;
+  }
+
+  li {
+    margin: 20px;
+  }
+}

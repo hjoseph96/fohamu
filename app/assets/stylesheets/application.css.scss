@@ -25,10 +25,13 @@
 @import "sunset.min.css";
 
 @import 'navbar';
+@import 'footer';
 @import "pages/home";
 @import "pages/our_school";
 @import "pages/fbla";
 @import "pages/about_us";
+@import "pages/terms_of_service";
+@import "pages/privacy_policy";
 @import "donations/donate";
 
 html, body {

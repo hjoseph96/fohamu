@@ -1,0 +1,37 @@
+<footer>
+  <div class=container>
+    <div class="company-info">
+      <div class="logo">
+        <%= image_tag 'logo.png' %>
+      </div>
+
+      <div class="info">
+        <h3>Focus Haitian Music Inc.</h3>
+        <p>
+          14736 225th street<br>
+          Springfield Gardens, NY 11413
+        </p>
+      </div>
+
+    </div>
+
+    <div class="social">
+      <div class="social-buttons">
+        <a href="https://www.facebook.com/focushaiti" class="social-buttons__button social-button social-button--facebook" aria-label="Facebook">
+          <span class="social-button__inner">
+           <i class="fab fa-facebook-f"></i>
+          </span>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <div class="bottom-bar">
+    <div class="bar">
+      Copyright ©2021 •
+      All rights reserved •
+      <%= link_to 'Privacy Policy', privacy_policy_path %> •
+      <%= link_to 'Terms of Service', terms_of_service_path %>
+    </div>
+  </div>
+</footer>

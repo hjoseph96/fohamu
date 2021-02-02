@@ -465,6 +465,8 @@ for the icon, if you want to change the color, be sure to use `%23` instead of `
   .checkmark {
     display: none;
 
+    &.show { display: flex; }
+
     &.draw:after {
       animation-duration: 800ms;
       animation-timing-function: ease;
@@ -517,6 +519,55 @@ for the icon, if you want to change the color, be sure to use `%23` instead of `
       opacity: 1;
     }
   }
+}
 
+body.donations-donation_success {
+  section.donation-success {
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    background-image: image-url('donation_success.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
 
+    .overlay {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(80,70,38,0.73);
+      -webkit-backdrop-filter: blur(5px);
+      /* apply the blur */
+      backdrop-filter: blur(5px);
+      z-index: 5;
+    }
+
+    .thanks-panel {
+      box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+      min-height: 40vh;
+      background-color: linen;
+      min-width: 35vw;
+      z-index: 99;
+
+      h1 {
+        font-family: Bebas Neue, sans-serif;
+        font-size: 58px;
+        color: #BD8E01;
+        width: 100%;
+        font-weight: 500;
+        letter-spacing: 2.8px;
+        margin-top: 44px;
+      }
+
+      p {
+        font-size: 25px;
+        font-family: Open Sans, sans-serif;
+        max-width: 80%;
+        margin: 0 auto;
+      }
+    }
+  }
 }
