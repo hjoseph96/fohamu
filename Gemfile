@@ -14,7 +14,7 @@ gem 'font-awesome-sass', '~> 5.15.1'
 gem 'inline_svg'
 gem 'money-rails'
 gem 'currency_select'
-
+gem 'stripe'
 
 gem 'bootsnap', '>= 1.4.4', require: false
 
@@ -22,6 +22,7 @@ group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
   gem 'rails_real_favicon'
   gem 'pry-rails'
+  gem 'dotenv-rails'
 end
 
 group :development do

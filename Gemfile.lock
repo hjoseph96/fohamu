@@ -71,6 +71,10 @@ GEM
     currency_select (3.0.0)
       actionview (>= 5.2.0, < 6.2)
       money (~> 6.0)
+    dotenv (2.7.6)
+    dotenv-rails (2.7.6)
+      dotenv (= 2.7.6)
+      railties (>= 3.2)
     em-websocket (0.5.2)
       eventmachine (>= 0.12.9)
       http_parser.rb (~> 0.6.0)
@@ -212,6 +216,7 @@ GEM
       actionpack (>= 4.0)
       activesupport (>= 4.0)
       sprockets (>= 3.0.0)
+    stripe (5.29.0)
     thor (1.1.0)
     tilt (2.0.10)
     tzinfo (2.0.4)
@@ -238,6 +243,7 @@ DEPENDENCIES
   bootsnap (>= 1.4.4)
   byebug
   currency_select
+  dotenv-rails
   font-awesome-sass (~> 5.15.1)
   guard-livereload
   inline_svg
@@ -253,6 +259,7 @@ DEPENDENCIES
   rails_real_favicon
   sass-rails (>= 6)
   spring
+  stripe
   tzinfo-data
   web-console (>= 4.1.0)
   webpacker (~> 5.0)

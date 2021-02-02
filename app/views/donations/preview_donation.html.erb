@@ -6,7 +6,10 @@
 
     <div>
       <h3><%= @donation.frequency.capitalize.gsub('_', '-') %> Amount</h3>
-      <p><%= @donation.price_in_cents / 100 %> <%= @donation.currency %></p>
+      <p class="price">
+        <%= @donation.currency_symbol %><%= @donation.price_in_cents / 100 %>
+        <%= @donation.currency %>
+      </p>
     </div>
 
     <div class="payment-info">
@@ -19,7 +22,7 @@
           <p class="message">Name on Card</p>
           <input type="text" name="name"/>
           <p class="message">Card Number</p>
-          <input type="text" name="number">
+          <input type="text" name="number" maxlength="19">
 
           <div class="inline">
             <p class="message">Expiration</p>
@@ -46,14 +49,14 @@
           <%= select_tag :state, options_for_select(us_states) %>
 
           <p class="message">Zip Code</p>
-          <input type="text" name="zip-code">
+          <input type="text" name="zip">
 
         </form>
 
         <h3>Contact Information</h3>
         <form id="contact-info"">
           <p class="message">Phone</p>
-          <input type="text" name="phone"/>
+          <input type="text" name="phone_number"/>
 
           <p class="message">Email</p>
           <input type="text" name="email"/>
@@ -63,7 +66,15 @@
 
 
     <div class="submit">
-      <%= link_to "Submit", '#', class: 'donate button pwa-element pwa-borders-borderBottom-reveal' %>
+      <input name="authenticity_token" value="<%= form_authenticity_token %>" type="hidden">
+      <%= submit_tag "Submit", class: 'donate button pwa-element pwa-borders-borderBottom-reveal' %>
     </div>
   </div>
+
+  <div class="loading">
+    <div class="circle-loader">
+      <div class="checkmark draw"></div>
+    </div>
+  </div>
+  
 </section>

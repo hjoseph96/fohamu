@@ -19,15 +19,22 @@ ActiveRecord::Schema.define(version: 2021_01_27_194855) do
     t.integer "price_in_cents", null: false
     t.string "currency"
     t.integer "frequency"
+    t.datetime "last_payment_date"
+    t.integer "donor_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.index ["donor_id"], name: "index_donations_on_donor_id"
   end
 
   create_table "donors", force: :cascade do |t|
-    t.string "first_name"
-    t.string "last_name"
+    t.string "full_name"
     t.string "email"
     t.string "phone_number"
+    t.string "address"
+    t.string "city"
+    t.string "state"
+    t.string "zip"
+    t.string "customer_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end

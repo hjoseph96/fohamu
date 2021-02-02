@@ -7,4 +7,6 @@ Rails.application.routes.draw do
 
   get 'donate', to: 'donations#donate'
   get 'donate/preview', to: 'donations#preview_donation'
+  get 'donate/success', to: 'donationations#donation_sucess'
+  post '/donate/process_payment', to: 'donations#charge_donation'
 end
