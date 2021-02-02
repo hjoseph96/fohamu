@@ -10,8 +10,14 @@ footer {
     justify-content: space-between;
     padding: 45px 0 14px;
 
-    .logo img {
-      width: 132px;
+    .company-info {
+      display: flex;
+    }
+    .logo {
+      margin-right: 34px;
+      img {
+        width: 132px;
+      }
     }
 
     h3, p {
