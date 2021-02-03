@@ -5,6 +5,9 @@
     height: 70vh;
     width: 100%;
 
+    @media (max-width: 400px) {
+      height: 37vh;
+    }
 
     video {
       width: 100%;
@@ -36,6 +39,14 @@
         position: relative;
         top: -113px;
         left: 45px;
+
+
+        @media (max-width: 400px) {
+          position: relative;
+          top: -80px;
+          left: 45px;
+          width: 137px;
+        }
       }
 
       h2 {
@@ -49,6 +60,11 @@
         letter-spacing: 4px;
         font-family: Bebas Neue, sans-serif;
         color: white;
+
+        @media (max-width: 400px) {
+          font-size: 23px;
+          top: -160px;
+        }
       }
     }
   }
@@ -72,6 +88,11 @@
       letter-spacing: 4px;
       font-family: Bebas Neue, sans-serif;
       color: white;
+
+      @media (max-width: 400px) {
+        display: flex;
+        font-size: 30px;
+      }
     }
 
     .flag {
@@ -95,11 +116,23 @@
       padding: 125px 50px 100px;
       justify-content: center;
 
+      @media (max-width: 400px) {
+        padding: 125px 0px 100px;
+      }
+
       .panel {
         background-color: white;
         width: calc(33% - 30px);
         min-height: 500px;
         margin: 15px;
+
+        @media (max-width: 1800px) {
+          width: calc(50% - 30px);
+        }
+
+        @media (max-width: 1000px) {
+          width: 100%;
+        }
 
         .title {
           padding: 50px 0;
@@ -143,6 +176,10 @@
           font-family: Open Sans, sans-serif;
           line-height: 1.6;
           letter-spacing: 0.3px;
+
+          @media (max-width: 400px) {
+            font-size: 16px;
+          }
         }
       }
     }
@@ -154,6 +191,14 @@
     padding: 50px 50px 115px;
     position: relative;
     background-color: whitesmoke;
+
+    @media (max-width: 1200px) {
+      padding-bottom: 205px;
+    }
+
+    @media (max-width: 1200px) {
+      padding-bottom: 83px;
+    }
 
     .gallery-modal {
       width: 100%;
@@ -213,6 +258,22 @@
             display: flex;
             justify-content: center;
 
+            @media (max-height: 1100px) {
+              margin-top: 1%;
+
+              img {
+                height: 44vh !important;
+              }
+
+              video {
+                width: 80vw;
+                height: 50vh;
+                // position: relative;
+                // top: -57%;
+                object-fit: cover;
+              }
+            }
+
             img {
               width: 80vw;
               height: 80vh;
@@ -226,6 +287,26 @@
     .glide {
       height: 100%;
 
+      .glide__bullets {
+        @media (max-width: 1200px) {
+          top: 10px;
+        }
+      }
+
+      .glide__arrow {
+        @media (max-width: 400px) {
+          top: 17em;
+
+          &.glide__arrow--left {
+            left: -1em;
+          }
+
+          &.glide__arrow--right {
+            right: -1em;
+          }
+        }
+      }
+
       .glide__slides {
         margin: 50px 20px;
 
@@ -235,6 +316,15 @@
           margin: 10px;
           position: relative;
           background-color: rgba(black, 0.7);
+
+          @media (max-width: 1220px) {
+            width: 80%;
+            height: 55vh;
+          }
+
+          @media (max-width: 400px) {
+            height: 30vh;
+          }
 
           &:hover, &:focus {
 

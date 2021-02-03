@@ -97,6 +97,10 @@
       @media (max-width: 1372px) {
         top: -16px;
       }
+
+      @media (max-width: 400px) {
+        width:: 110px;
+      }
     }
   }
 
@@ -148,4 +152,8 @@
   pointer-events: none;
 
   background: linear-gradient(-198deg, #ffa303 11%, transparent 10%);
+
+  @media(max-width: 400px) {
+    background: linear-gradient(-207deg, #ffa303 11%, transparent 10%)
+  }
 }

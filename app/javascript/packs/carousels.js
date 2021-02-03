@@ -4,10 +4,13 @@ document.addEventListener('DOMContentLoaded', () => {
   const sliders = document.querySelectorAll('.glide');
   if (sliders.length === 0) return;
 
+  let perView = 3;
+  if (window.screen.width <= 1220) perView = 1
+
   new Glide('.glide', {
     type: 'slider',
     keyboard: true,
-    perView: 3
+    perView: 1
   }).mount()
 
   const galleryItems = document.querySelectorAll('.gallery-item img, .gallery-item video');
