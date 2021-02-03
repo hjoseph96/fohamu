@@ -8,6 +8,86 @@
   padding: 1em 0;
   z-index: 99;
 
+  .desktop {
+    display: flex;
+
+    @media (max-width: 1065px) {
+      display: none;
+    }
+  }
+
+  .mobile {
+    display: none;
+
+
+    @media (max-width: 1065px) {
+      display: flex;
+    }
+
+    .pwa-hamburgerMenu4 {
+      margin-right: 15px;
+      margin-top: 15px;
+
+      .pwa-hamburgerLayer4 {
+        background-color: white;
+      }
+    }
+
+    .menu {
+     position: fixed;
+     background-color: #FEA351;
+     top: 0;
+     right: -320px;
+     height: 100%;
+     width: 320px;
+     padding-top: 80px;
+     transition: right 0.7s ease;
+
+     &.show {
+       right: 0;
+     }
+
+     ul {
+       margin: 70px 25px;
+
+       li {
+         padding: 1em;
+         list-style: none;
+         font-family: Ubuntu;
+
+         a {
+           text-decoration: none;
+           text-transform: uppercase;
+           color: white;
+           font-weight: 600;
+           font-size: 16px;
+           letter-spacing: 0.4px;
+
+           &:hover, &:focus { text-decoration: underline; }
+         }
+       }
+     }
+
+
+     .donate {
+       margin-top: 36px;
+
+       .donate.button {
+         --pwa-underline: wheat;
+         text-decoration: none;
+         margin-top: 0;
+         margin-right: 25px;
+         padding: 10px 28px !important;
+         background-color: #F87B5E;
+         font-family: Ubuntu;
+         color: white;
+         font-weight: 500;
+         letter-spacing: 0.3px;
+       }
+     }
+   }
+  }
+
   .logo {
     img {
       width: 150px;

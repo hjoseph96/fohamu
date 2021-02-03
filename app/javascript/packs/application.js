@@ -9,5 +9,6 @@ import "channels"
 Rails.start()
 ActiveStorage.start()
 
+require('packs/mobile_nav.js')
 require('packs/carousels.js')
 require('packs/donations.js')

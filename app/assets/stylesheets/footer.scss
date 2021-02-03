@@ -12,6 +12,10 @@ footer {
 
     .company-info {
       display: flex;
+
+      @media (max-width: 1065px) {
+        display: block;
+      }
     }
     .logo {
       margin-right: 34px;

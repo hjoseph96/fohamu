@@ -41,6 +41,10 @@
       color: #BD8E01;
       padding: 2em;
       letter-spacing: 3px;
+
+      @media (max-width: 530px) {
+        padding:  100px 0 25px;
+      }
     }
 
     .values {
@@ -335,6 +339,7 @@
 
   .breakdown {
     display: flex;
+    flex-wrap: wrap;
     margin: 0 auto;
     max-width: 1300px;
     justify-content: center;
@@ -346,6 +351,10 @@
       background-color: white;
       width: calc(50% - 20px);
       box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+
+      @media (max-width: 1000px) {
+        width: 100%;
+      }
 
 
       .panel-title {
