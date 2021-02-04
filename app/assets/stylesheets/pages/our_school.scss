@@ -38,7 +38,11 @@
       padding: 100px 30px;
 
       @media (max-width: 1271px) {
-        padding: 100px 60px;
+        padding: 100px 63px 0 12px;
+      }
+
+      @media (max-width: 850px) {
+        padding: 40px 10px;
       }
 
 
@@ -63,6 +67,8 @@
           width: calc(100% - 10px);
         }
 
+
+
         &:hover {
           box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
         }
@@ -73,7 +79,14 @@
             width: 180px;
             position: relative;
             top: -36px;
+
+            @media (max-width: 400px) {
+              height: 193px;
+              width: 115px;
+
+            }
           }
+
         }
 
         &.k-12{
@@ -86,6 +99,10 @@
           width: 100%;
           height: 150px;
           display: flex;
+
+          @media (max-width: 400px) {
+            height: 81px;
+          }
 
           .icon {
             svg {
@@ -107,6 +124,10 @@
             margin: 40px 0 20px 0;
             width: 100%;
             font-weight: 500;
+
+            @media (max-width: 400px) {
+              font-size: 23px;
+            }
           }
         }
 
@@ -119,6 +140,11 @@
           font-weight: 500;
           letter-spacing: 0.3px;
           line-height: 1.6;
+
+          @media (max-width: 400px) {
+            font-size: 15px;
+            padding: 30px 20px;
+          }
         }
 
       }
@@ -130,6 +156,17 @@
     padding: 50px;
     position: relative;
     background-color: whitesmoke;
+
+
+    @media (max-width: 1200px) {
+      padding-bottom: 205px;
+    }
+
+    @media (max-width: 1200px) {
+      padding-bottom: 83px;
+      padding: 17px;
+    }
+
 
     .gallery-modal {
       width: 100%;
@@ -180,6 +217,12 @@
         height: 100%;
         width: 100%;
 
+        .glide__arrow {
+          &:hover, &:focus, &:active{
+            background: white;
+            color: black;
+          }
+        }
 
         .glide__slides {
 
@@ -195,6 +238,22 @@
               object-fit: cover;
               object-position: bottom;
             }
+
+            @media (max-height: 1100px) {
+              margin-top: 1%;
+
+              img {
+                height: 44vh !important;
+              }
+
+              video {
+                width: 80vw;
+                height: 50vh;
+                // position: relative;
+                // top: -57%;
+                object-fit: cover;
+              }
+            }
           }
         }
       }
@@ -203,8 +262,37 @@
     .glide {
       height: 100%;
 
+      .glide__bullets {
+        @media (max-width: 1200px) {
+          top: 10px;
+        }
+      }
+
+      .glide__arrow {
+        &:hover, &:focus, &:active {
+          background: white;
+          color: black;
+        }
+
+        @media (max-width: 400px) {
+          top: 10em;
+
+          &.glide__arrow--left {
+            left: -1em;
+          }
+
+          &.glide__arrow--right {
+            right: -1em;
+          }
+        }
+      }
+
       .glide__slides {
         margin: 50px 20px;
+
+        @media (max-width: 400px) {
+          margin: 35px 0 0;
+        }
 
         .glide__slide {
           height: 34vh;
@@ -212,6 +300,15 @@
           background-color: aqua;
           margin: 10px;
           cursor: pointer;
+
+          @media (max-width: 1220px) {
+            width: 80%;
+            height: 55vh;
+          }
+
+          @media (max-width: 400px) {
+            height: 30vh;
+          }
 
           &:hover, &:focus {
 
