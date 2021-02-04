@@ -2,6 +2,7 @@ footer {
   background-color: #ffa303;
   margin: 0;
   padding: 0;
+  width: 100%;
 
   .container {
     max-width: 50vw;
@@ -12,6 +13,8 @@ footer {
 
     .company-info {
       display: flex;
+      width: 100%;
+      
 
       @media (max-width: 1065px) {
         display: block;

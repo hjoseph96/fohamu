@@ -33,6 +33,15 @@ body.pages-about_us {
     background-color: linen;
     padding: 50px 0 200px;
 
+    @media (max-width: 400px) {
+      width: 0 0 100px;
+
+      p {
+        padding: 9px;
+        font-size: 18px;
+      }
+    }
+
     h1 {
       margin: 0 0 40px;;
       text-align: center;
@@ -40,6 +49,12 @@ body.pages-about_us {
       font-family: 'Bebas Neue';
       color: #BD8E01;
       padding: 2em 0 0em;
+
+      @media (max-width: 400px) {
+        margin: 0px 0 15px;
+        font-size: 3em;
+        padding: 1em 0 0em;
+      }
     }
 
     p  {
@@ -52,6 +67,11 @@ body.pages-about_us {
       color: #A56837;
       letter-spacing: 0.2px;
       line-height: 1.6;
+
+      @media (max-width: 400px) {
+        padding: 9px;
+        font-size: 18px;
+      }
     }
   }
 
@@ -66,7 +86,9 @@ body.pages-about_us {
     border-top: 8px solid #F89F02;
     border-bottom: 8px solid #F89F02;
 
-
+    @media (max-width: 400px) {
+      padding: 100px 0 0px;
+    }
 
     .founder {
       width: 50%;
@@ -88,6 +110,20 @@ body.pages-about_us {
           .header .photo img.founder-img {
             width: 452px !important;
             height: 347px !important;
+          }
+        }
+
+        @media (max-width: 458px) {
+          .header .photo img.founder-img {
+            width: 314px !important;
+            height: 235px !important;
+          }
+        }
+
+        @media (max-width: 344px) {
+          .header .photo img.founder-img {
+            width: 236px !important;
+            height: 186px !important;
           }
         }
 
@@ -119,6 +155,22 @@ body.pages-about_us {
           .header .photo img.founder-img {
             height: 395px !important;
             width: 435px !important;
+          }
+        }
+
+
+        @media (max-width: 458px) {
+          .header .photo img.founder-img {
+            height: 295px !important;
+            width: 337px !important;
+          }
+        }
+
+
+        @media (max-width: 344px) {
+          .header .photo img.founder-img {
+            width: 237px !important;
+            height: 195px !important;
           }
         }
 
@@ -163,6 +215,11 @@ body.pages-about_us {
 
           h2 {
             margin: 34px 0;
+
+            @media (max-width: 400px) {
+              font-size: 0.8em;
+              margin: 15px 0;
+            }
           }
         }
 
@@ -171,6 +228,11 @@ body.pages-about_us {
           img {
             width: 150px;
             height: 150px;
+
+            @media (max-width: 400px) {
+              width: 100px;
+              height: 100px;
+            }
           }
         }
 
@@ -182,6 +244,13 @@ body.pages-about_us {
 
             h3 {
               margin-top: -7px !important;
+            }
+          }
+
+          @media (max-width: 1575px) {
+            h3 {
+              margin-top: 20px !important;
+              font-size: 18px !important;
             }
           }
 
@@ -205,12 +274,22 @@ body.pages-about_us {
         color: #A56837;
         letter-spacing: 0.2px;
         line-height: 1.9;
+
+        @media (max-width: 400px) {
+          padding: 26px;
+          font-size: 18px;
+        }
       }
     }
   }
 
 
   section.contact-us {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background:#F9F9F9;
+
     #contact input[type="text"], #contact input[type="email"],
     #contact input[type="tel"], #contact input[type="url"],
     #contact textarea, #contact button[type="submit"] {
@@ -218,15 +297,18 @@ body.pages-about_us {
     }
 
     #contact {
-    	background:#F9F9F9;
-	    padding: 100px 600px 200px;
+      width: 50vw;
+      @media (max-width: 400px) {
+        width: 70vw;
+      }
     }
 
     #contact h3 {
-    	color: #F96;
-    	display: block;
-    	font-size: 45px;
-    	font-weight: 400;
+      color: #F96;
+      display: block;
+      font-size: 38px;
+      font-family: Open Sans, sans-serif;
+      font-weight: 600;
     }
 
     #contact h4 {
