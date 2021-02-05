@@ -23,18 +23,18 @@ class RecurringPaymentsWorker
     end
   end
 
-  def charge_donation(@donation)
+  def charge_donation(donation)
     begin
       @charge = Stripe::Charge.create({
-        amount: @donation.price_in_cents,
-        currency: @donation.currency,
-        customer: @donation.donor.customer_id,
+        amount: donation.price_in_cents,
+        currency: donation.currency,
+        customer: donation.donor.customer_id,
         description: 'FOHAMU Donation',
       })
 
-      send_payment_success_email(@donation.donor) if @charge.paid
+      send_payment_success_email(donation.donor) if @charge.paid
     rescue Stripe::CardError => e
-      send_payment_error_email(@donation.donor)
+      send_payment_error_email(donation.donor)
     end
   end
 
