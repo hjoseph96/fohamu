@@ -1,6 +1,12 @@
 class DonationsController < ApplicationController
   def donate
     @page_title = 'Make a Donation'
+    @page_description = "Donating to our organization will empower us to do more
+    in our mission to secure the future's of Haitian students. Our operations are
+    split between Haiti and USA. We import food and technology from USA into Haiti
+    to keep our school at the forefront of innovation. After 2010's disastrous
+    earthquake, we have rebuilt! However, we still need the funds to return and
+    surpass our former glory."
   end
 
   def preview_donation
