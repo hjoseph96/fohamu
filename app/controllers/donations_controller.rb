@@ -1,8 +1,11 @@
 class DonationsController < ApplicationController
   def donate
+    @page_title = 'Make a Donation'
   end
 
   def preview_donation
+    @page_title = 'Submit Your Donation'
+
     donation_type = donation_params[:donation_type]
     price_in_cents = donation_params[:"#{donation_type}_price"].to_i * 100
     currency = donation_params[:"#{donation_type}_currency"]
@@ -47,7 +50,7 @@ class DonationsController < ApplicationController
         if @donor.save!
           @donation.donor_id = @donor.id
           @donation.last_payment_date = DateTime.now
-          
+
           render json: { success: true } if @donation.save!
         end
       end
@@ -57,6 +60,7 @@ class DonationsController < ApplicationController
   end
 
   def donation_success
+    @page_title = 'Thank You'
   end
 
   def cancel_donation

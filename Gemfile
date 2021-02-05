@@ -15,7 +15,7 @@ gem 'inline_svg'
 gem 'money-rails'
 gem 'currency_select'
 gem 'stripe'
-
+gem 'sitemap_generator'
 gem 'bootsnap', '>= 1.4.4', require: false
 
 group :development, :test do
