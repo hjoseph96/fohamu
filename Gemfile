@@ -19,6 +19,7 @@ gem 'sitemap_generator'
 gem 'bootsnap', '>= 1.4.4', require: false
 gem 'sidekiq'
 gem 'sidekiq-cron', '~> 1.1'
+gem 'rollbar'
 
 
 group :development, :test do
