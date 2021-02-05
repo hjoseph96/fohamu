@@ -17,6 +17,9 @@ gem 'currency_select'
 gem 'stripe'
 gem 'sitemap_generator'
 gem 'bootsnap', '>= 1.4.4', require: false
+gem 'sidekiq'
+gem 'sidekiq-cron', '~> 1.1'
+
 
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
@@ -31,7 +34,7 @@ group :development do
   gem 'listen', '~> 3.3'
   gem 'spring'
   gem 'guard-livereload'
-  gem "rack-livereload"
+  gem 'rack-livereload'
 end
 
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]

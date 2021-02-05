@@ -67,6 +67,7 @@ GEM
     byebug (11.1.3)
     coderay (1.1.3)
     concurrent-ruby (1.1.8)
+    connection_pool (2.2.3)
     crass (1.0.6)
     currency_select (3.0.0)
       actionview (>= 5.2.0, < 6.2)
@@ -79,11 +80,16 @@ GEM
       eventmachine (>= 0.12.9)
       http_parser.rb (~> 0.6.0)
     erubi (1.10.0)
+    et-orbi (1.2.4)
+      tzinfo
     eventmachine (1.2.7)
     ffi (1.14.2)
     font-awesome-sass (5.15.1)
       sassc (>= 1.11)
     formatador (0.2.5)
+    fugit (1.4.2)
+      et-orbi (~> 1.1, >= 1.1.8)
+      raabro (~> 1.4)
     globalid (0.4.2)
       activesupport (>= 4.2.0)
     guard (2.16.2)
@@ -151,6 +157,7 @@ GEM
       pry (>= 0.10.4)
     puma (5.2.0)
       nio4r (~> 2.0)
+    raabro (1.4.0)
     racc (1.5.2)
     rack (2.2.3)
     rack-livereload (0.3.17)
@@ -195,6 +202,7 @@ GEM
     rb-fsevent (0.10.4)
     rb-inotify (0.10.1)
       ffi (~> 1.0)
+    redis (4.2.5)
     rubyzip (2.3.0)
     sass-rails (6.0.0)
       sassc-rails (~> 2.1, >= 2.1.1)
@@ -208,6 +216,13 @@ GEM
       tilt
     semantic_range (2.3.1)
     shellany (0.0.1)
+    sidekiq (6.1.3)
+      connection_pool (>= 2.2.2)
+      rack (~> 2.0)
+      redis (>= 4.2.0)
+    sidekiq-cron (1.2.0)
+      fugit (~> 1.1)
+      sidekiq (>= 4.2.1)
     sitemap_generator (6.1.2)
       builder (~> 3.0)
     spring (2.1.1)
@@ -260,6 +275,8 @@ DEPENDENCIES
   rails (~> 6.1.1)
   rails_real_favicon
   sass-rails (>= 6)
+  sidekiq
+  sidekiq-cron (~> 1.1)
   sitemap_generator
   spring
   stripe
