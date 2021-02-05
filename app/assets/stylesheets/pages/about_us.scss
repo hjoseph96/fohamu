@@ -33,7 +33,7 @@ body.pages-about_us {
     background-color: linen;
     padding: 50px 0 200px;
 
-    @media (max-width: 400px) {
+    @media (max-width: 415px) {
       width: 0 0 100px;
 
       p {
@@ -50,7 +50,7 @@ body.pages-about_us {
       color: #BD8E01;
       padding: 2em 0 0em;
 
-      @media (max-width: 400px) {
+      @media (max-width: 415px) {
         margin: 0px 0 15px;
         font-size: 3em;
         padding: 1em 0 0em;
@@ -68,7 +68,7 @@ body.pages-about_us {
       letter-spacing: 0.2px;
       line-height: 1.6;
 
-      @media (max-width: 400px) {
+      @media (max-width: 415px) {
         padding: 9px;
         font-size: 18px;
       }
@@ -86,7 +86,7 @@ body.pages-about_us {
     border-top: 8px solid #F89F02;
     border-bottom: 8px solid #F89F02;
 
-    @media (max-width: 400px) {
+    @media (max-width: 415px) {
       padding: 100px 0 0px;
     }
 
@@ -216,7 +216,7 @@ body.pages-about_us {
           h2 {
             margin: 34px 0;
 
-            @media (max-width: 400px) {
+            @media (max-width: 415px) {
               font-size: 0.8em;
               margin: 15px 0;
             }
@@ -229,7 +229,7 @@ body.pages-about_us {
             width: 150px;
             height: 150px;
 
-            @media (max-width: 400px) {
+            @media (max-width: 415px) {
               width: 100px;
               height: 100px;
             }
@@ -275,7 +275,7 @@ body.pages-about_us {
         letter-spacing: 0.2px;
         line-height: 1.9;
 
-        @media (max-width: 400px) {
+        @media (max-width: 415px) {
           padding: 26px;
           font-size: 18px;
         }
@@ -298,7 +298,7 @@ body.pages-about_us {
 
     #contact {
       width: 50vw;
-      @media (max-width: 400px) {
+      @media (max-width: 415px) {
         width: 70vw;
       }
     }

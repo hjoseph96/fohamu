@@ -80,7 +80,7 @@
             position: relative;
             top: -36px;
 
-            @media (max-width: 400px) {
+            @media (max-width: 415px) {
               height: 193px;
               width: 115px;
 
@@ -100,7 +100,7 @@
           height: 150px;
           display: flex;
 
-          @media (max-width: 400px) {
+          @media (max-width: 415px) {
             height: 81px;
           }
 
@@ -125,7 +125,7 @@
             width: 100%;
             font-weight: 500;
 
-            @media (max-width: 400px) {
+            @media (max-width: 415px) {
               font-size: 23px;
             }
           }

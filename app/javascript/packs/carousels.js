@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', () => {
   new Glide('.glide', {
     type: 'slider',
     keyboard: true,
-    perView: 1
+    perView: perView
   }).mount()
 
   const galleryItems = document.querySelectorAll('.gallery-item img, .gallery-item video');
