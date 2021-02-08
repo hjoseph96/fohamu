@@ -24,6 +24,11 @@
 @import "fonts";
 @import "sunset.min.css";
 
+
+img {
+  max-width: 100%;
+}
+
 @import 'navbar';
 @import 'footer';
 @import "pages/home";
