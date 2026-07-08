@@ -257,32 +257,33 @@
         }
 
 
-        .glide__slides {
+         .glide__slides {
 
-        .glide__slide {
-          height: auto;
-          width: auto;
-          display: flex;
-          justify-content: center;
+          .glide__slide {
+            height: auto;
+            width: auto;
+            display: flex;
+            justify-content: center;
 
-          video {
-              width: 60vw;
-              height: 50vh;
+            video {
+                width: 60vw;
+                height: 50vh;
+                object-fit: cover;
+              }
+
+            img {
+              width: 90vw;
+              height: 90vh;
               object-fit: cover;
             }
 
-          img {
-            width: 90vw;
-            height: 90vh;
-            object-fit: cover;
-          }
-
-          
-          @media (max-height: 1100px) {
-            video {
-              width: 85vw;
-              height: 85vh;
-              object-fit: cover;
+            
+            @media (max-height: 1100px) {
+              video {
+                width: 85vw;
+                height: 85vh;
+                object-fit: cover;
+              }
             }
           }
         }
