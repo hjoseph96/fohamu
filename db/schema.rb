@@ -10,8 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_01_27_194855) do
-
+ActiveRecord::Schema[7.1].define(version: 2021_01_27_194855) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -19,10 +18,10 @@ ActiveRecord::Schema.define(version: 2021_01_27_194855) do
     t.integer "price_in_cents", null: false
     t.string "currency"
     t.integer "frequency"
-    t.datetime "last_payment_date"
+    t.datetime "last_payment_date", precision: nil
     t.integer "donor_id"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
     t.index ["donor_id"], name: "index_donations_on_donor_id"
   end
 
@@ -35,8 +34,8 @@ ActiveRecord::Schema.define(version: 2021_01_27_194855) do
     t.string "state"
     t.string "zip"
     t.string "customer_id"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
 end

@@ -1,13 +1,14 @@
 source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
-ruby '3.0.0'
+ruby '3.3.11'
 
 gem 'pg'
-gem 'rails', '~> 6.1.1'
+gem 'logger'
+gem 'rails', '~> 7.1.0'
 gem 'puma', '~> 5.0'
 gem 'sass-rails', '>= 6'
-gem 'webpacker', '~> 5.0'
+gem 'shakapacker', '~> 7.2'
 gem 'jbuilder', '~> 2.7'
 
 gem 'font-awesome-sass', '~> 5.15.1'
@@ -33,7 +34,7 @@ group :development do
   gem 'web-console', '>= 4.1.0'
   gem 'rack-mini-profiler', '~> 2.0'
   gem 'listen', '~> 3.3'
-  gem 'spring'
+  gem 'spring', '~> 4.7'
   gem 'guard-livereload'
   gem 'rack-livereload'
 end

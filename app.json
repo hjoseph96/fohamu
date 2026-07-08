@@ -1,0 +1,38 @@
+{
+  "name": "fohamu",
+  "description": "Fohamu donation and community site",
+  "stack": "heroku-24",
+  "buildpacks": [
+    { "url": "heroku/nodejs" },
+    { "url": "heroku/ruby" }
+  ],
+  "addons": [
+    "heroku-postgresql",
+    "heroku-redis"
+  ],
+  "env": {
+    "RAILS_ENV": {
+      "value": "production"
+    },
+    "RAILS_MASTER_KEY": {
+      "description": "Contents of config/master.key, used to decrypt config/credentials.yml.enc",
+      "required": true
+    },
+    "STRIPE_PUB_KEY": {
+      "description": "Stripe publishable key",
+      "required": true
+    },
+    "STRIPE_SECRET_KEY": {
+      "description": "Stripe secret key",
+      "required": true
+    }
+  },
+  "formation": {
+    "web": {
+      "quantity": 1
+    },
+    "worker": {
+      "quantity": 1
+    }
+  }
+}
