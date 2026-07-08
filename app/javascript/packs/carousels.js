@@ -15,6 +15,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const galleryItems = document.querySelectorAll('.gallery-item img, .gallery-item video');
   const fullScreenGalleryEl = document.querySelector('.glide-modal');
+  let fullScreenGallery = null;
   for (let i = 0; i < galleryItems.length; i++) {
 
     const showFullScreenGallery = (e) => {
@@ -26,13 +27,20 @@ document.addEventListener('DOMContentLoaded', () => {
 
       const index = [...el.parentElement.children].indexOf(el)
 
-      const fullScreenGallery = new Glide(fullScreenGalleryEl, {
+      // The modal must be visible before Glide mounts, otherwise it measures
+      // a display:none (zero-width) track and computes a bogus centering offset.
+      fullScreenGalleryEl.parentNode.classList.add('show');
+
+      if (fullScreenGallery) {
+        fullScreenGallery.destroy();
+      }
+
+      fullScreenGallery = new Glide(fullScreenGalleryEl, {
         type: 'slider',
         keyboard: true,
         perView: 1,
         startAt: index
       }).mount();
-      fullScreenGalleryEl.parentNode.classList.add('show');
     };
 
     galleryItems[i].addEventListener('click', showFullScreenGallery);
