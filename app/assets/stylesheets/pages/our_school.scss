@@ -336,8 +336,18 @@
             height: 55vh;
           }
 
+          @media (max-width: 768px) {
+            width: 90%;
+            height: 45vh;
+          }
+
           @media (max-width: 415px) {
+            width: 95%;
             height: 30vh;
+          }
+
+          @media (max-width: 344px) {
+            height: 25vh;
           }
 
           &:hover, &:focus {
