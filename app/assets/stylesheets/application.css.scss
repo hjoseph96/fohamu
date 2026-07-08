@@ -46,13 +46,14 @@ html, body {
 }
 
 .flash {
+  transition: opacity 0.5s ease, max-height 0.5s ease, padding 0.5s ease;
+  font: 400 14px/1.4 "Open Sans", Helvetica, Arial, sans-serif;
   text-align: center;
   padding: 14px 20px;
-  font: 400 14px/1.4 "Open Sans", Helvetica, Arial, sans-serif;
-  opacity: 1;
   max-height: 100px;
-  overflow: hidden;
-  transition: opacity 0.5s ease, max-height 0.5s ease, padding 0.5s ease;
+  position: fixed;
+  width: 100%;
+  opacity: 1;
 
   &.notice {
     background: #DFF5E1;
