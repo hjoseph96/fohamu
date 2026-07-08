@@ -54,6 +54,7 @@ html, body {
   position: fixed;
   width: 100%;
   opacity: 1;
+  z-index: 999999;
 
   &.notice {
     background: #DFF5E1;
