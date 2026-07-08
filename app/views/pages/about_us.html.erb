@@ -148,27 +148,35 @@
 
 
 <section class="contact-us">
-  <form id="contact" action="" method="post">
+  <%= form_with url: contact_form_submit_path, method: :post, scope: :contact_us, local: true, id: 'contact' do |f| %>
     <h3>Contact Us</h3>
 
     <fieldset>
-      <input placeholder="Your name" type="text" tabindex="1" required autofocus>
+      <%= f.text_field :first_name, placeholder: 'First Name', tabindex: 1, required: true, autofocus: true %>
     </fieldset>
 
     <fieldset>
-      <input placeholder="Your Email Address" type="email" tabindex="2" required>
+      <%= f.text_field :last_name, placeholder: 'Last Name', tabindex: 2, required: true %>
     </fieldset>
 
     <fieldset>
-      <input placeholder="Your Phone Number" type="tel" tabindex="3" required>
+      <%= f.email_field :email, placeholder: 'Your Email Address', tabindex: 3, required: true %>
     </fieldset>
 
     <fieldset>
-      <textarea placeholder="Type your Message Here...." tabindex="5" required></textarea>
+      <%= f.telephone_field :phone, placeholder: 'Your Phone Number', tabindex: 4, required: true %>
     </fieldset>
 
     <fieldset>
-      <button name="submit" type="submit" id="contact-submit" data-submit="...Sending">Submit</button>
+      <%= f.select :reason, [['General Inquiry', 'general'], ['Sponsorship', 'sponsorship'], ['Donation', 'donation'], ['Partnership', 'partnership']], { prompt: 'Reason for contacting' }, { tabindex: 5, required: true } %>
     </fieldset>
-  </form>
+
+    <fieldset>
+      <%= f.text_area :message, placeholder: 'Type your Message Here....', tabindex: 6, required: true %>
+    </fieldset>
+
+    <fieldset>
+      <%= f.button 'Submit', type: 'submit', id: 'contact-submit', data: { submit: '...Sending' } %>
+    </fieldset>
+  <% end %>
 </section>

@@ -38,4 +38,18 @@ class PagesController < ApplicationController
     @page_title = 'Privacy Policy'
   end
 
+  def contact_form_submit
+    ContactUsMailer.with(contact: contact_us_params).auto_reply.deliver_now
+
+    redirect_to about_us_path, notice: "Thanks for reaching out! We'll be in touch soon."
+  rescue StandardError => e
+    Rails.logger.error("ContactUsMailer#auto_reply failed: #{e.message}")
+    redirect_to about_us_path, alert: 'Something went wrong sending your message. Please try again later.'
+  end
+
+  private
+
+  def contact_us_params
+    params.require(:contact_us).permit(:first_name, :last_name, :phone, :email, :message, :reason)
+  end
 end

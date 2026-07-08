@@ -44,3 +44,19 @@ html, body {
   margin: 0;
   -webkit-font-smoothing: antialiased;
 }
+
+.flash {
+  text-align: center;
+  padding: 14px 20px;
+  font: 400 14px/1.4 "Open Sans", Helvetica, Arial, sans-serif;
+
+  &.notice {
+    background: #DFF5E1;
+    color: #1E6B2E;
+  }
+
+  &.alert {
+    background: #FBE1E1;
+    color: #A3272B;
+  }
+}

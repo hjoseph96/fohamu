@@ -11,4 +11,5 @@ Rails.application.routes.draw do
   get 'donate/preview', to: 'donations#preview_donation'
   get 'donate/success', to: 'donations#donation_success'
   post '/donate/process_payment', to: 'donations#charge_donation'
+  post '/about_us/submit', to: 'pages#contact_form_submit', as: :contact_form_submit
 end

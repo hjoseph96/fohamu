@@ -1,4 +1,5 @@
 require "active_support/core_ext/integer/time"
+require Rails.root.join("lib/aws_ses_smtp_credentials")
 
 Rails.application.configure do
   # Settings specified here will take precedence over those in config/application.rb.
@@ -75,7 +76,22 @@ Rails.application.configure do
 
   # Ignore bad email addresses and do not raise email delivery errors.
   # Set this to true and configure the email server for immediate delivery to raise delivery errors.
-  # config.action_mailer.raise_delivery_errors = false
+  config.action_mailer.raise_delivery_errors = true
+
+  config.action_mailer.default_url_options = { host: "fohamu.com" }
+  config.action_mailer.delivery_method = :smtp
+  config.action_mailer.smtp_settings = {
+    address: "email-smtp.us-east-1.amazonaws.com",
+    port: 587,
+    domain: "fohamu.com",
+    user_name: Rails.application.credentials.dig(:aws, :access_token),
+    password: AwsSesSmtpCredentials.password(
+      Rails.application.credentials.dig(:aws, :secret_key),
+      "us-east-1"
+    ),
+    authentication: :login,
+    enable_starttls_auto: true
+  }
 
   # Enable locale fallbacks for I18n (makes lookups for any locale fall back to
   # the I18n.default_locale when a translation cannot be found).
