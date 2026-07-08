@@ -232,13 +232,46 @@
             display: flex;
             justify-content: center;
 
-            img {
-              width: 80vw;
-              height: 60vh;
+            img, video {
               object-fit: cover;
+            }
+
+            img {
               object-position: bottom;
             }
 
+            // Mobile
+            img, video {
+              width: 95vw;
+              height: 50vh;
+            }
+
+            // Tablet
+            @media (min-width: 600px) {
+              img, video {
+                width: 90vw;
+                height: 65vh;
+              }
+            }
+
+            // Laptop
+            @media (min-width: 1024px) {
+              img, video {
+                width: 85vw;
+                height: 80vh;
+              }
+            }
+
+            // Desktop
+            @media (min-width: 1440px) {
+              img, video {
+                width: 75vw;
+                height: 85vh;
+              }
+            }
+
+            // Short viewports (landscape phones, small laptop screens) —
+            // keep the media from overflowing vertically regardless of width
             @media (max-height: 1100px) {
               margin-top: 1%;
 
@@ -247,11 +280,7 @@
               }
 
               video {
-                width: 80vw;
                 height: 50vh;
-                // position: relative;
-                // top: -57%;
-                object-fit: cover;
               }
             }
           }
